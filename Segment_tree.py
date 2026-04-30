@@ -14,7 +14,7 @@ def solve(n, q, a, ops):
         if l == r:                     # nếu là lá (1 phần tử)
             tree[id] = a[l]           # gán trực tiếp
             return
-        m = (l+r)//2                  # chia đôi đoạn
+        m = (l+r)//2                  # chia đôi đoạn   
         build(id*2, l, m)             # build nhánh trái
         build(id*2+1, m+1, r)         # build nhánh phải
         tree[id] = tree[id*2] + tree[id*2+1]   # gộp lại (sum)
